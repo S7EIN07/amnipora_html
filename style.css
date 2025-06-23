@@ -53,16 +53,6 @@ nav a {
   width: 300px;
 }
 
-.wave {
-  background: #0070f3;
-  height: 50px;
-  clip-path: polygon(0 0, 100% 100%, 0 100%);
-}
-
-.wave-invertida {
-  transform: rotate(180deg);
-}
-
 .parcerias {
   background: #0070f3;
   color: white;
