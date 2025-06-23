@@ -18,16 +18,29 @@ header {
 }
 
 header .logo {
-  height: 50px;
+  rotate: 180deg;
+  height: 250px;
+  translate: -10% -20%;
 }
 
 nav a {
   margin: 0 10px;
   text-decoration: none;
-  color: #0070f3;
+  color: #004aad;
   font-weight: bold;
 }
 
+.wave{
+  color: #004aad;
+}
+
+.wave-one{
+  translate: 0 20px;
+}
+
+.wave_three{
+  translate: 0 20px;
+}
 .intro {
   display: flex;
   padding: 40px;
@@ -40,12 +53,17 @@ nav a {
   max-width: 500px;
 }
 
+.text {
+  line-height: 1.2;
+}
+
 .intro button {
   margin-top: 15px;
   padding: 10px 20px;
   background: black;
   color: white;
-  border: none;
+  border-radius: 20px;
+  border-style: none;
   cursor: pointer;
 }
 
@@ -54,7 +72,7 @@ nav a {
 }
 
 .parcerias {
-  background: #0070f3;
+  background: #004aad;
   color: white;
   padding: 40px 20px;
   text-align: center;
@@ -77,10 +95,15 @@ nav a {
   text-align: center;
 }
 
+.objetivo-texto-imagem{
+  display: flex;
+  margin-right: 20rem;
+}
+
 .objetivo ul {
   list-style: none;
   margin: 20px auto;
-  max-width: 600px;
+  max-width: 400px;
   text-align: left;
 }
 
@@ -107,7 +130,7 @@ nav a {
 }
 
 .card {
-  background: #0070f3;
+  background: #004aad;
   padding: 20px;
   border-radius: 10px;
   color: white;
@@ -126,14 +149,14 @@ nav a {
 .card button {
   padding: 10px;
   background: white;
-  color: #0070f3;
+  color: #004aad;
   border: none;
   cursor: pointer;
   font-weight: bold;
 }
 
 .avaliacoes {
-  background: #0070f3;
+  background: #004aad;
   color: white;
   padding: 40px 20px;
   text-align: center;
@@ -149,7 +172,7 @@ nav a {
 
 .avaliacao {
   background: white;
-  color: #0070f3;
+  color: #004aad;
   padding: 10px 20px;
   border-radius: 10px;
   max-width: 200px;
