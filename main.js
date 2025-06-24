@@ -1,4 +1,4 @@
-// Splash (já estava no seu código)
+// Splash Screen Animation
 window.addEventListener('load', () => {
   const splash = document.getElementById('splash');
   const main = document.getElementById('main-content');
