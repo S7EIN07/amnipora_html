@@ -80,8 +80,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function scrollToTop() {
-  window.scrollTo({
-    top: 0,
-    behavior: 'slow'
-  });
+  window.scrollTo({ top: 0, behavior: 'slow' })
+  ;
 }
