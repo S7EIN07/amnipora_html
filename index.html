@@ -12,7 +12,7 @@
   </div>
 
 <div id="main-content" style="display: none;">
-  <header>
+  <header id="header">
     <img src="assets/img/logo.png" alt="Logo" class="logo"/>
     <nav>
       <a href="#parcerias">Parcerias</a>
@@ -89,26 +89,26 @@
   </section>
 
   <section class="cadastro" id="cadastro">
-  <h2>Cadastre-se</h2>
+  <h2>Contatar-nos</h2>
   <div class="forms">
     <div class="card">
-      <h3>Criar Conta</h3>
-      <form action="https://api.web3forms.com/submit" method="POST">
+      <form action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data">
         <input type="hidden" name="access_key" value="3dbfeea5-18a3-4472-a97b-4839118f37d1">
+
+        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
         <input type="text" id="cadastro-nome" name="name" placeholder="Nome" required>
         <input type="email" id="cadastro-email" name="email" placeholder="Email" required>
-        <input type="text"id="cadastro-descricao" name="descricao" placeholder="Descrição">
-        <input type="text" id="cadastro-observacoes" name="observacoes" placeholder="Observações">
+        <input type="text" id="cadastro-descricao" name="descricao" placeholder="Descrição" required></input>
+        <input type="text" id="cadastro-observacoes" name="observacoes" placeholder="Observações"></input>
         <input type="tel" id="cadastro-numero-contato-whatsapp" name="numero_contato_whatsapp" placeholder="Número de Contato (WhatsApp)" required>
         <input type="number" id="cadastro-idade" name="idade" placeholder="Idade (mínimo 18)" min="18" required>
 
-        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-        <input type="hidden" name="redirect" value=""> <!-- fazer pagina obrigado.html para avisar que ouve o envio da solicitação -->
+        <input type="hidden" name="redirect" value="http://127.0.0.1:5500/amnipora_html/obrigado.html">
 
         <div id="mensagem-erro" class="mensagem-erro"></div>
 
-        <button type="submit" id="btn-cadastrar">Cadastrar</button>
+        <button type="submit" id="btn-cadastrar">Contatar</button>
       </form>
     </div>
   </div>

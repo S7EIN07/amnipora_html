@@ -420,6 +420,10 @@ footer {
   gap: 20px;
 }
 
+.footer-right a{
+    text-decoration: none;
+}
+
 .footer-logo {
   font-size: 2.2rem;
   margin-bottom: 10px;

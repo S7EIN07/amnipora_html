@@ -4,8 +4,13 @@ window.addEventListener('load', () => {
   const main = document.getElementById('main-content');
   if (splash && main) {
     setTimeout(() => {
-      splash.style.display = 'none';
-      main.style.display = 'block';
+      splash.classList.add('fade-out');
+      setTimeout(() => {
+        splash.style.display = 'none';
+        main.style.display = 'block';
+        main.classList.add('slide-in');
+        setTimeout(() => main.classList.remove('slide-in'), 500);
+      }, 500);
     }, 2000);
   }
 });
@@ -64,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const numeroLimpo = numeroContato.replace(/\D/g, '');
     if (numeroLimpo.length < 10) {
-      mensagemErro.textContent = 'O número de WhatsApp deve ter pelo menos 10 dígitos.';
+      mensagemErro.textContent = 'O número deve ter pelo menos 10 dígitos.';
       mensagemErro.classList.add('ativo');
       return;
     }
@@ -75,5 +80,8 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function scrollToTop() {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+  window.scrollTo({
+    top: 0,
+    behavior: 'slow'
+  });
 }
