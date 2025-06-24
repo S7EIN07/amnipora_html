@@ -224,6 +224,21 @@ nav a {
   background: #003380;
 }
 
+.mensagem-erro {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  display: none;
+  background-color: #ff3333;
+  color: #fff;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.mensagem-erro.ativo {
+  display: block;
+}
+
 .avaliacoes {
   background: #004aad;
   color: white;
@@ -318,6 +333,7 @@ footer nav a {
 
 footer .social a {
   margin: 0 5px;
+  color: white;
   text-decoration: none;
   font-size: 18px;
 }

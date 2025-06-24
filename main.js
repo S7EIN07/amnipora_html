@@ -32,57 +32,41 @@ document.addEventListener("DOMContentLoaded", () => {
   animateCarousel();
 });
  
+// Form Validation
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.querySelector('.card form');
+  const mensagemErro = document.getElementById('mensagem-erro');
 
-document.getElementById('btn-cadastrar').addEventListener('click', function() {
-  const nome = document.getElementById('cadastro-nome').value;
-  const email = document.getElementById('cadastro-email').value;
-  const senha = document.getElementById('cadastro-senha').value;
-  const verificaSenha = document.getElementById('cadastro-verifica-senha').value;
-  const idade = document.getElementById('cadastro-idade').value;
+  form.addEventListener('submit', function(event) {
+    event.preventDefault(); 
 
-  // Validação básica
-  if (!nome || !email || !senha || !verificaSenha || !idade) {
-    alert('Por favor, preencha todos os campos.');
-    return;
-  }
+    const nome = document.getElementById('cadastro-nome').value;
+    const email = document.getElementById('cadastro-email').value;
+    const senha = document.getElementById('cadastro-senha').value;
+    const verificaSenha = document.getElementById('cadastro-verifica-senha').value;
+    const idade = document.getElementById('cadastro-idade').value;
 
-  if (idade < 18) {
-    alert('A idade mínima é 18 anos.');
-    return;
-  }
+    mensagemErro.textContent = '';
+    mensagemErro.classList.remove('ativo');
 
-  if (senha !== verificaSenha) {
-    alert('As senhas não coincidem.');
-    return;
-  }
+    if (!nome || !email || !senha || !verificaSenha || !idade) {
+      mensagemErro.textContent = 'Por favor, preencha todos os campos.';
+      mensagemErro.classList.add('ativo');
+      return;
+    }
 
-  // Preparar dados para envio à API
-  const dados = {
-    nome: nome,
-    email: email,
-    senha: senha,
-    idade: parseInt(idade)
-  };
+    if (idade < 18) {
+      mensagemErro.textContent = 'A idade mínima é 18 anos.';
+      mensagemErro.classList.add('ativo');
+      return;
+    }
 
-  // Enviar para a API (placeholder - substitua pela URL real)
-  fetch('https://api.exemplo.com/register', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(dados),
-  })
-  .then(response => response.json())
-  .then(data => {
-    alert('Cadastro realizado com sucesso!');
-    document.getElementById('cadastro-nome').value = '';
-    document.getElementById('cadastro-email').value = '';
-    document.getElementById('cadastro-senha').value = '';
-    document.getElementById('cadastro-verifica-senha').value = '';
-    document.getElementById('cadastro-idade').value = '';
-  })
-  .catch(error => {
-    alert('Erro ao cadastrar. Tente novamente.');
-    console.error('Erro:', error);
+    if (senha !== verificaSenha) {
+      mensagemErro.textContent = 'As senhas não coincidem.';
+      mensagemErro.classList.add('ativo');
+      return;
+    }
+
+    form.submit();
   });
 });
