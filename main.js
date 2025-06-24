@@ -73,3 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
     form.submit();
   });
 });
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
