@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const mensagemErro = document.getElementById('mensagem-erro');
 
   form.addEventListener('submit', function(event) {
-    event.preventDefault(); // Evita envio imediato para validação
+    event.preventDefault(); 
 
     const nome = document.getElementById('cadastro-nome').value;
     const email = document.getElementById('cadastro-email').value;
@@ -47,11 +47,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const numeroContato = document.getElementById('cadastro-numero-contato-whatsapp').value;
     const idade = document.getElementById('cadastro-idade').value;
 
-    // Limpa mensagem de erro anterior
     mensagemErro.textContent = '';
     mensagemErro.classList.remove('ativo');
 
-    // Validação básica
     if (!nome || !email || !numeroContato || !idade) {
       mensagemErro.textContent = 'Por favor, preencha todos os campos.';
       mensagemErro.classList.add('ativo');
@@ -64,15 +62,14 @@ document.addEventListener('DOMContentLoaded', function() {
       return;
     }
 
-    // Validação simples do número de WhatsApp (ex.: deve ter pelo menos 10 dígitos)
-    const numeroLimpo = numeroContato.replace(/\D/g, ''); // Remove não dígitos
+    const numeroLimpo = numeroContato.replace(/\D/g, '');
     if (numeroLimpo.length < 10) {
       mensagemErro.textContent = 'O número de WhatsApp deve ter pelo menos 10 dígitos.';
       mensagemErro.classList.add('ativo');
       return;
     }
 
-    // Se todas as validações passarem, envia o formulário
+    
     form.submit();
   });
 });
