@@ -6,6 +6,7 @@
 
 html {
   scroll-behavior: smooth;
+  max-height: 90%;
 }
 
 body {
@@ -27,11 +28,25 @@ header .logo {
   translate: -10% -20%;
 }
 
+nav{
+  translate: 0 -4rem;
+}
+
 nav a {
   margin: 0 10px;
   text-decoration: none;
   color: #004aad;
   font-weight: bold;
+}
+
+.btn-cadastrar {
+  background-color: black;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  border-style: none;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .wave{
@@ -59,6 +74,12 @@ nav a {
 
 .text {
   line-height: 1.2;
+  font-size: 1.2rem;
+}
+
+.intro h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
 }
 
 .intro button {
@@ -69,6 +90,7 @@ nav a {
   border-radius: 20px;
   border-style: none;
   cursor: pointer;
+  font-weight: bold;  
 }
 
 .intro-img {
@@ -99,30 +121,45 @@ nav a {
   text-align: center;
 }
 
-.objetivo-texto-imagem{
+.objetivo h4 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+
+.objetivo-texto-imagem {
+  translate: 0rem 0;
   display: flex;
-  margin-right: 20rem;
+  align-items: center;
+  gap: 50px; 
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .objetivo ul {
   list-style: none;
   margin: 20px auto;
-  max-width: 400px;
+  max-width: 600px;
   text-align: left;
 }
 
 .objetivo li {
-  margin-bottom: 10px;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
 }
 
 .objetivo img {
-  width: 300px;
+  width: 550px;
+  height: auto;
   margin-top: 20px;
 }
 
 .cadastro {
   padding: 40px 20px;
   text-align: center;
+  background: #fff;
+  color: #004aad;
 }
 
 .forms {
@@ -134,29 +171,57 @@ nav a {
 }
 
 .card {
-  background: #004aad;
-  padding: 20px;
-  border-radius: 10px;
-  color: white;
-  width: 250px;
-  display: flex;
-  flex-direction: column;
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  color: #004aad;
+  width: 300px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #004aad;
 }
 
 .card input {
+  width: 100%;
   margin: 10px 0;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
+  padding: 12px;
+  border: 1px solid #004aad;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #004aad;
+  background: #f9f9f9;
+  transition: border-color 0.3s ease;
+}
+
+.card input:focus {
+  border-color: #003380;
+  outline: none;
 }
 
 .card button {
-  padding: 10px;
-  background: white;
-  color: #004aad;
+  width: 100%;
+  padding: 12px;
+  background: #004aad;
+  color: #fff;
   border: none;
+  border-radius: 8px;
   cursor: pointer;
   font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.card button:hover {
+  background: #003380;
 }
 
 .avaliacoes {
@@ -177,9 +242,41 @@ nav a {
 .avaliacao {
   background: white;
   color: #004aad;
-  padding: 10px 20px;
+  padding: 20px;
   border-radius: 10px;
-  max-width: 200px;
+  max-width: 400px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.avaliacao-texto {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+.avaliacao-autor {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.nome {
+  font-weight: bold;
+  margin: 0;
+}
+
+.descricao {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
 }
 
 #splash {
@@ -204,12 +301,13 @@ nav a {
 }
 
 footer {
-  background: #001d3d;
+  background: #004aad;
   color: white;
   display: flex;
   justify-content: space-around;
   padding: 20px;
   flex-wrap: wrap;
+  padding-top: 2rem;
 }
 
 footer nav a {
@@ -222,4 +320,50 @@ footer .social a {
   margin: 0 5px;
   text-decoration: none;
   font-size: 18px;
+}
+
+footer img {
+  height: 250px;
+  width: auto;
+  margin: 0 30px;
+  flex-shrink: 0;
+  object-fit: contain;
+  display: block;
+}
+
+footer .logo{
+  overflow: hidden;
+  translate: -110% 0;
+}
+
+.carousel {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  background-color: #fff;
+  padding: 20px 0;
+}
+
+.carousel-track {
+  display: flex;
+  width: max-content;
+  transition: none;
+}
+.carousel-track img {
+  height: 100px;
+  width: auto;
+  margin: 0 30px;
+  flex-shrink: 0;
+  object-fit: contain;
+  display: block;
+}
+
+
+@keyframes scrollCarousel {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
