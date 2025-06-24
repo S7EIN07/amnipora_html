@@ -38,18 +38,21 @@ document.addEventListener('DOMContentLoaded', function() {
   const mensagemErro = document.getElementById('mensagem-erro');
 
   form.addEventListener('submit', function(event) {
-    event.preventDefault(); 
+    event.preventDefault(); // Evita envio imediato para validação
 
     const nome = document.getElementById('cadastro-nome').value;
     const email = document.getElementById('cadastro-email').value;
-    const senha = document.getElementById('cadastro-senha').value;
-    const verificaSenha = document.getElementById('cadastro-verifica-senha').value;
+    const descricao = document.getElementById('cadastro-descricao').value;
+    const observacoes = document.getElementById('cadastro-observacoes').value;
+    const numeroContato = document.getElementById('cadastro-numero-contato-whatsapp').value;
     const idade = document.getElementById('cadastro-idade').value;
 
+    // Limpa mensagem de erro anterior
     mensagemErro.textContent = '';
     mensagemErro.classList.remove('ativo');
 
-    if (!nome || !email || !senha || !verificaSenha || !idade) {
+    // Validação básica
+    if (!nome || !email || !numeroContato || !idade) {
       mensagemErro.textContent = 'Por favor, preencha todos os campos.';
       mensagemErro.classList.add('ativo');
       return;
@@ -61,12 +64,15 @@ document.addEventListener('DOMContentLoaded', function() {
       return;
     }
 
-    if (senha !== verificaSenha) {
-      mensagemErro.textContent = 'As senhas não coincidem.';
+    // Validação simples do número de WhatsApp (ex.: deve ter pelo menos 10 dígitos)
+    const numeroLimpo = numeroContato.replace(/\D/g, ''); // Remove não dígitos
+    if (numeroLimpo.length < 10) {
+      mensagemErro.textContent = 'O número de WhatsApp deve ter pelo menos 10 dígitos.';
       mensagemErro.classList.add('ativo');
       return;
     }
 
+    // Se todas as validações passarem, envia o formulário
     form.submit();
   });
 });
