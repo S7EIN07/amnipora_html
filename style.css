@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -5,12 +7,12 @@
 }
 
 html {
+  font-family: "Josefin Sans", sans-serif;
   scroll-behavior: smooth;
   max-height: 90%;
 }
 
 body {
-  font-family: Arial, sans-serif;
   background: #fff;
   color: #000;
 }
@@ -60,6 +62,7 @@ nav a {
 .wave_three{
   translate: 0 20px;
 }
+
 .intro {
   display: flex;
   padding: 40px;
@@ -74,8 +77,10 @@ nav a {
 
 .text {
   line-height: 1.2;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
+
+
 
 .intro h1 {
   font-size: 3rem;
