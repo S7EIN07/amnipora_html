@@ -87,17 +87,6 @@ nav a {
   margin-bottom: 20px;
 }
 
-.intro button {
-  margin-top: 15px;
-  padding: 10px 20px;
-  background: black;
-  color: white;
-  border-radius: 20px;
-  border-style: none;
-  cursor: pointer;
-  font-weight: bold;  
-}
-
 .intro-img {
   translate: -6rem 0;
   width: 300px;
@@ -364,6 +353,7 @@ footer .logo{
   width: 100%;
   background-color: #fff;
   padding: 20px 0;
+  z-index: 1;
 }
 
 .carousel-track {
@@ -371,13 +361,36 @@ footer .logo{
   width: max-content;
   transition: none;
 }
+
 .carousel-track img {
-  height: 100px;
+  height: 250px;
   width: auto;
   margin: 0 30px;
   flex-shrink: 0;
   object-fit: contain;
   display: block;
+}
+
+.tentar_um{
+  position: absolute;
+  height: 400px;
+  width: 200px;
+  left: 0;
+  margin-top: -20px;
+  background: linear-gradient(to left, transparent, #004aad, #004aad);
+  padding: 20px;
+  z-index: 1000;
+}
+
+.tentar_dois{
+  position: absolute;
+  right: 0;
+  height: 400px;
+  width: 200px;
+  margin-top: -20px;
+  background: linear-gradient(to right, transparent, #004aad, #004aad);
+  padding: 20px;
+  z-index: 1000;
 }
 
 footer {
