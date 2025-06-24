@@ -98,10 +98,11 @@
         <input type="email" id="cadastro-email" name="email" placeholder="Email" required>
         <input type="text"id="cadastro-descricao" name="descricao" placeholder="Descrição">
         <input type="text" id="cadastro-observacoes" name="observacoes" placeholder="Observações">
-        <input type="number" id="cadastro-numero-contato-whatsapp" name="numero_contato_whatsapp" placeholder="Número de Contato (WhatsApp)" required>
+        <input type="tel" id="cadastro-numero-contato-whatsapp" name="numero_contato_whatsapp" placeholder="Número de Contato (WhatsApp)" required>
         <input type="number" id="cadastro-idade" name="idade" placeholder="Idade (mínimo 18)" min="18" required>
 
         <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+        <input type="hidden" name="redirect" value=""> <!-- fazer pagina obrigado.html para avisar que ouve o envio da solicitação -->
 
         <div id="mensagem-erro" class="mensagem-erro"></div>
 
