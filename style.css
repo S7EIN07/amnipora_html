@@ -111,6 +111,39 @@ nav a {
   border-radius: 8px;
 }
 
+.sobre-nos {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.sobre-nos h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #004aad;
+}
+
+.sobre-nos-texto-imagem {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.sobre-nos-texto-imagem p {
+  line-height: 1.4;
+  font-size: 1.2rem;
+  max-width: 600px;
+}
+
+.sobre-nos-texto-imagem img {
+  width: 450px;
+  height: auto;
+  margin-top: 20px;
+}
+
 .objetivo {
   padding: 40px 20px;
   text-align: center;
