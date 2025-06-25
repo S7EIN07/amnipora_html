@@ -340,7 +340,17 @@ nav a {
 #splash img {
   rotate: -90deg;
   width: 350px;
-  margin-top: -9rem;
+  margin-top: -12rem;
+}
+
+#splash h1 {
+  font-size: 2.5rem;
+  margin-top: 4rem;
+}
+
+#splash p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
 }
 
 footer {
