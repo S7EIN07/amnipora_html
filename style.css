@@ -52,16 +52,12 @@ nav a {
   text-decoration: none;
 }
 
-.wave{
-  color: #004aad;
-}
-
-.wave-one{
+.wave_one, .wave_three {
   translate: 0 20px;
 }
 
-.wave_three{
-  translate: 0 20px;
+.wave_two{
+  translate: 0 -20px;
 }
 
 .intro {
@@ -92,34 +88,16 @@ nav a {
   width: 300px;
 }
 
-.parcerias {
-  background: #004aad;
-  color: white;
-  padding: 40px 20px;
-  text-align: center;
-}
-
-.parcerias .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 15px;
-  margin-top: 20px;
-}
-
-.parcerias img {
-  width: 100%;
-  border-radius: 8px;
-}
-
 .sobre-nos {
   padding: 40px 20px;
   text-align: center;
+  background: #004aad;
 }
 
 .sobre-nos h1 {
   font-size: 2.5rem;
   margin-bottom: 20px;
-  color: #004aad;
+  color: #fff;
 }
 
 .sobre-nos-texto-imagem {
@@ -136,6 +114,7 @@ nav a {
   line-height: 1.4;
   font-size: 1.2rem;
   max-width: 600px;
+  color: #fff;
 }
 
 .sobre-nos-texto-imagem img {
@@ -144,9 +123,68 @@ nav a {
   margin-top: 20px;
 }
 
+.equipe {
+  padding: 40px 20px;
+  text-align: center;
+  background: #004aad;
+}
+
+.equipe h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.equipe-imagem-texto {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  row-gap: 30px;
+  flex-wrap: wrap;
+}
+
+.equipe-imagem-texto img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.equipe-imagem-texto img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.4);
+}
+
+.pessoa {
+  text-align: center;
+  color: white;
+  width: 250px; /* igual ao tamanho da imagem */
+  flex-shrink: 0; /* impede de encolher e sobrepor */
+}
+
+.pessoa h5 {
+  margin: 10px 0 5px;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.pessoa p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #d0d0d0;
+}
+
 .objetivo {
   padding: 40px 20px;
   text-align: center;
+}
+
+.objetivo h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
 }
 
 .objetivo h4 {
@@ -505,6 +543,13 @@ footer p {
   background-color: #dbe6ff;
 }
 
+.sized_box{
+  height: 75px;
+}
+
+.sized_box_azul{
+  height: 150px;
+}
 
 @keyframes scrollCarousel {
   0% {

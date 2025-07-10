@@ -47,8 +47,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const nome = document.getElementById('cadastro-nome').value;
     const email = document.getElementById('cadastro-email').value;
-    const descricao = document.getElementById('cadastro-descricao').value;
-    const observacoes = document.getElementById('cadastro-observacoes').value;
     const numeroContato = document.getElementById('cadastro-numero-contato-whatsapp').value;
     const idade = document.getElementById('cadastro-idade').value;
 
