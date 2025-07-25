@@ -20,18 +20,6 @@ O projeto busca:
 - **JavaScript** (opcional, se houver scripts dinâmicos)  
 - *(Adicionar frameworks ou bibliotecas se aplicável: Bootstrap, Vue, React, etc.)*
 
-## Estrutura do Projeto
-
-📂amnipora/
-├── 📝index.html
-├── 📝 obrigado.html
-├── 📝 style.css
-├── 📝 main.js
-├── 📂assets/
-│ └── 📂img/📷
-| └── 📂empresas/📷
-└── README.md
-
 ## 📸 Preview
 
 colocar gif
